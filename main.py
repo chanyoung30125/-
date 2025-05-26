@@ -2,8 +2,10 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 
-# 데이터 로드
+# 데이터 URL
 url = "https://drive.google.com/uc?export=download&id=1pwfON6doXyH5p7AOBJPfiofYlni0HVVY"
+
+# 데이터 로드
 data = pd.read_csv(url)
 
 # 앱 타이틀
@@ -26,3 +28,4 @@ st.plotly_chart(fig)
 # 예시: 데이터 통계 정보
 st.subheader("데이터 통계 정보")
 st.write(data.describe())
+
